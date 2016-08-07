@@ -4,15 +4,15 @@ from exceptions import NotDictException, ValueNotStringException
 class AliasDecoder:
     def __init__(self, filename):
         self.filename = filename
-        self.aliases = self.aliases_from_file(filename)
+        self.decode_aliases_from_file()
 
-    def aliases_from_file(self, filename):
+    def decode_aliases_from_file(self):
         aliases = None
         with open(self.filename, 'r') as file:
             aliases = load(file)
         self.__validate_is_dict(aliases)
         self.__validate_all_values_strings(aliases)
-        return aliases
+        self.aliases = aliases
 
     @staticmethod
     def __validate_is_dict(obj):

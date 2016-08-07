@@ -1,7 +1,7 @@
-from unittest import TestCase
-from unittest.mock import mock_open, patch
 from alias_decoder import AliasDecoder
 from exceptions import NotDictException, ValueNotStringException
+from unittest import TestCase
+from unittest.mock import mock_open, patch
 
 class AliasDecoderTest(TestCase):
     def test_array_file_throws_exception(self):
