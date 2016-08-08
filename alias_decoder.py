@@ -4,9 +4,9 @@ from exceptions import NotDictException, ValueNotStringException
 class AliasDecoder:
     def __init__(self, filename):
         self.filename = filename
-        self.decode_aliases_from_file()
+        self.__decode_aliases_from_file()
 
-    def decode_aliases_from_file(self):
+    def __decode_aliases_from_file(self):
         aliases = None
         with open(self.filename, 'r') as file:
             aliases = load(file)
