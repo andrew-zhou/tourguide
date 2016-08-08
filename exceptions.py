@@ -3,3 +3,6 @@ class NotDictException(Exception):
 
 class ValueNotStringException(Exception):
     pass
+
+class ValueNotScriptOrUrlException(Exception):
+    pass

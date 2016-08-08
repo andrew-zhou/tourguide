@@ -1,3 +1,4 @@
 {
-  "test": "www.reddit.com"
+  "test": "http://www.reddit.com",
+  "script": "$sample_script"
 }

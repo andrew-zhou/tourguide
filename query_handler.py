@@ -15,7 +15,7 @@ class QueryHandler:
         # Routes that are prefixed with $ refer to custom methods that
         # return a redirect object
         if route[0] == '$':
-            self.__run_script(route[1:])
+            return self.__run_script(route[1:])
         else:
             return redirect(route)
 

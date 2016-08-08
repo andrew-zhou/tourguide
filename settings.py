@@ -11,6 +11,7 @@ class Settings:
         if cls.options is not None:
             return
         with open('.env', 'r') as env:
+            cls.options = {}
             for line in env:
                 eq_index = line.index('=')
-                cls.options[line[:eq_index]] = line[eq_index+1:]
+                cls.options[line[:eq_index].strip()] = line[eq_index+1:].strip()
